@@ -4,6 +4,7 @@ const cors = require('cors');
 const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
+app.use(express.static('build'));
 app.use(cors());
 
 let notes = [
