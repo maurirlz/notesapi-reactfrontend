@@ -9,7 +9,7 @@
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail",
     "start": "node index.js",
-    "test": "echo \\\"Error: no test specified\\\" && exit 1\""
+    "test": "jest --verbose"
   },
   "author": "\"Mauricio Ezequiel Benitez\"",
   "license": "MIT",
@@ -20,6 +20,10 @@
     "mongoose": "^5.9.15"
   },
   "devDependencies": {
+    "jest": "^26.0.1",
     "nodemon": "^2.0.4"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }
