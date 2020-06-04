@@ -8,20 +8,23 @@
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
     "logs:prod": "heroku logs --tail",
-    "start": "node index.js",
-    "test": "jest --verbose"
+    "start": "cross-env NODE_ENV=production node index.js",
+    "dev": "cross-env NODE_ENV=development nodemon index.js",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand"
   },
   "author": "\"Mauricio Ezequiel Benitez\"",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.15"
   },
   "devDependencies": {
     "jest": "^26.0.1",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   },
   "jest": {
     "testEnvironment": "node"
