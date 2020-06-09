@@ -8,5 +8,9 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="@types/jest" level="application" />
+    <orderEntry type="library" name="@types/mongodb" level="application" />
+    <orderEntry type="library" name="@types/mongoose" level="application" />
+    <orderEntry type="library" name="@types/mongoose-unique-validator" level="application" />
   </component>
 </module>
