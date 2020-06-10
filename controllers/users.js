@@ -27,4 +27,10 @@ usersRouter.post('/', async (req, res) => {
   res.json(savedUser);
 })
 
+usersRouter.delete('/:id', async (request, response) => {
+
+  await User.findByIdAndRemove(request.params.id);
+  response.status(204).end();
+})
+
 module.exports = usersRouter;
