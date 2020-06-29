@@ -50,7 +50,7 @@ notesRouter.post("/", async (req, res, next) => {
   const savedNote = await note.save();
   user.notes = user.notes.concat(savedNote._id);
   await user.save();
-  res.json(savedNote.toJSON);
+  res.json(savedNote.toJSON());
 });
 
 notesRouter.delete("/:id", async (req, res, next) => {
